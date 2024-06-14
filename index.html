@@ -18,6 +18,13 @@
             </div>
         </div>
     </nav>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
     <!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
@@ -55,6 +62,16 @@
             }
         };
 
+        const images = {
+        'es': {
+            'openCV': 'images/downloadupdates_theapplication_thearrow_descarg_2915.png',
+            'contactMe': 'images/whatsapp-logo_icon-icons.com_57054.png'
+        },
+        'en': {
+            'openCV': 'images/downloadupdates_theapplication_thearrow_descarg_2915.png',
+            'contactMe': 'images/whatsapp-logo_icon-icons.com_57054.png'
+        }
+    };
         // Variable para mantener el idioma actual
         let currentLanguage = 'es';
 
@@ -75,6 +92,7 @@
             document.getElementById('mail').innerText = texts[newLanguage]['mail'];
             document.getElementById('footer').innerText = texts[newLanguage]['footer'];
 
+            
             // Actualizar el idioma actual
             currentLanguage = newLanguage;
         }
@@ -85,82 +103,84 @@
     </script>
 
 
-
-<div style="text-align: center; font-size: 30px; margin-top: 50px;">
-    <span id="intro">Hola 👋, soy</span> 
-    <div style="font-size: 100px;">
-        Gerónimo Alles. <br>
+<section id="sect1" class="sect">
+    <div style="text-align: center; font-size: 30px; margin-top: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+        <span id="intro">Hola 👋, soy</span> 
+        <div style="font-size: 100px;">
+            Gerónimo Alles. <br>
+        </div>
+        <span id="role">Desarrollador Full Stack Junior.</span>
+        <br>
+        <br>
+        <div class="botonesPrincipales">
+            <a href="documents/Geronimo Alles CV.pdf" target="_blank" class="btn btn-primary" style="font-size: 30px;" id="openCV">
+                Ver CV 
+            </a>
+            
+            <a href="https://wa.me/+5493434055602" target="_blank" class="btn btn-primary ms-2" style="font-size: 30px;" ID="contactMe">
+                Contáctame 
+            </a>
+        </div>
     </div>
-    <span id="role">Desarrollador Full Stack Junior.</span>
     <br>
     <br>
-    <div class="botonesPrincipales">
-        <a href="documents/Geronimo Alles CV.pdf" target="_blank">
-            <button type="button" class="btn btn-primary" id="openCV" style="font-size: 30px;">Ver CV <img src="images/downloadupdates_theapplication_thearrow_descarg_2915.png"></button>
-        </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div class="contenedor" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+        <div id="skills" style="font-size: 30px;">Mis habilidades</div>
+        <br>
+       
+       
+        <div class="item"><b>PHP</b> <br>
+            <img src="images/file.png">
+        </div>
+        <div class="item"><b>C#</b> <br>
+            <img src="images/c.png">
+        </div>
+        <div class="item"><b>Java</b> <br>
+            <img src="images/java.png">
+        </div>
+        <div class="item"><b>SQL</b><br>
+            <img src="images/sql.png">
+        </div>
+        <div class="item"><b>HTML</b><br>
+            <img src="images/html.png">
+        </div>
+        <div class="item"><b>CSS</b><br>
+            <img src="images/css.png">
+        </div>
+        <div class="item"><b>Git Hub</b><br>
+            <img src="images/git.png">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div class="contenedor2" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+        <div id="learning" style="font-size: 30px;">Estoy aprendiendo</div>
         
-        <a href="https://wa.me/+5493434055602" target="_blank">
-            <button type="button" class="btn btn-primary" id="contactMe" style="font-size: 30px;">Contáctame <img src="images/whatsapp-logo_icon-icons.com_57054.png"></button>
-        </a>
+            <div class="item"><img src="images/docker.png"></div>
+            <img class="item"src="images/aws.png">
+            <img class="item" src="images/js.png">
+        
     </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<div class="contenedor" style="text-align: center; display:flexbox;">
-    <div id="skills" style="font-size: 30px;">Mis habilidades</div>
+</section>
+<section id="sect2" class="sect">
     <br>
-   
-   
-    <div class="item"><b>PHP</b> <br>
-        <img src="images/file.png">
-    </div>
-    <div class="item"><b>C#</b> <br>
-        <img src="images/c.png">
-    </div>
-    <div class="item"><b>Java</b> <br>
-        <img src="images/java.png">
-    </div>
-    <div class="item"><b>SQL</b><br>
-        <img src="images/sql.png">
-    </div>
-    <div class="item"><b>HTML</b><br>
-        <img src="images/html.png">
-    </div>
-    <div class="item"><b>CSS</b><br>
-        <img src="images/css.png">
-    </div>
-    <div class="item"><b>Git Hub</b><br>
-        <img src="images/git.png">
-    </div>
-</div>
 <br>
 <br>
 <br>
 <br>
-<br>
-
-
-<div class="contenedor2" style="text-align: center; display:flexbox;">
-    <div id="learning" style="font-size: 30px;">Estoy aprendiendo</div>
-    
-        <div class="item"><img src="images/docker.png"></div>
-        <img class="item"src="images/aws.png">
-        <img class="item" src="images/js.png">
-    
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="containerProyectos">
+<div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
     <div id="projects" style="text-align: center; font-size: 30px; width: 100%;">Mis Proyectos</div>
     
     <div class="card">
@@ -200,7 +220,7 @@
 <br>
 <br>
 <br>
-<div class="container">
+<div class="container" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
     <div id="mail" style="font-size: 30px;">Mail</div>
     <div class="form-group">
         <div class="form-floating mb-3">
@@ -240,7 +260,9 @@
     });
 </script>
 
-<footer id="footer" style="text-align: center; margin-top: 20px;">
+</section>
+
+<footer id="footer" style="text-align: center; margin-top: 20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
     Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.
 </footer>
 </body>
