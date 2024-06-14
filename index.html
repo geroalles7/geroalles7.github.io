@@ -8,13 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-    
-
-
-<!-- Bootstrap JS y dependencias (requerido para el navbar responsive) -->
-
-
-
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,7 +30,7 @@
                 'buttonText': 'Ingles',
                 'intro': 'Hola 👋, soy',
                 'role': 'Desarrollador Full Stack Junior.',
-                'downloadCV': 'Ver CV',
+                'openCV': 'Ver CV',
                 'contactMe': 'Contáctame',
                 'skills': 'Mis habilidades',
                 'learning': 'Estoy aprendiendo',
@@ -51,7 +44,7 @@
                 'buttonText': 'Español',
                 'intro': 'Hello 👋, I am',
                 'role': 'Junior Full Stack Developer.',
-                'downloadCV': 'See CV',
+                'openCV': 'See CV',
                 'contactMe': 'Contact me',
                 'skills': 'My skills',
                 'learning': 'I am learning',
@@ -61,7 +54,6 @@
                 'footer': 'This site is developed with HTML, CSS, Bootstrap and Javascript.'
             }
         };
-        
 
         // Variable para mantener el idioma actual
         let currentLanguage = 'es';
@@ -74,7 +66,7 @@
             document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
             document.getElementById('intro').innerText = texts[newLanguage]['intro'];
             document.getElementById('role').innerText = texts[newLanguage]['role'];
-            document.getElementById('openCV').innerText = texts[newLanguage]['downloadCV'];
+            document.getElementById('openCV').innerText = texts[newLanguage]['openCV'];
             document.getElementById('contactMe').innerText = texts[newLanguage]['contactMe'];
             document.getElementById('skills').innerText = texts[newLanguage]['skills'];
             document.getElementById('learning').innerText = texts[newLanguage]['learning'];
@@ -89,6 +81,7 @@
 
         // Event listener para el botón
         document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
+        
     </script>
 
 
@@ -103,10 +96,11 @@
     <br>
     <div class="botonesPrincipales">
         <a href="documents/Geronimo Alles CV.pdf" target="_blank">
-            <button id="openCV" style="font-size: 30px;">Ver CV <img src="images/downloadupdates_theapplication_thearrow_descarg_2915.png"></button>
+            <button type="button" class="btn btn-primary" id="openCV" style="font-size: 30px;">Ver CV <img src="images/downloadupdates_theapplication_thearrow_descarg_2915.png"></button>
         </a>
+        
         <a href="https://wa.me/+5493434055602" target="_blank">
-            <button id="contactMe" style="font-size: 30px;">Contáctame <img src="images/whatsapp-logo_icon-icons.com_57054.png"></button>
+            <button type="button" class="btn btn-primary" id="contactMe" style="font-size: 30px;">Contáctame <img src="images/whatsapp-logo_icon-icons.com_57054.png"></button>
         </a>
     </div>
 </div>
@@ -215,9 +209,9 @@
         </div>
         <div class="buttons">
             <a href="mailto:geroalles7@gmail.com">
-                <button><img src="images/send_120237.png" alt="Send"></button>
+                <button type="button" class="btn btn-info"><img src="images/send_120237.png" alt="Send"></button>
             </a>
-            <button id="copyEmailBtn"><img src="images/copythislink_3349.png" alt="Copy"></button>
+            <button id="copyEmailBtn" type="button" class="btn btn-info"><img src="images/copythislink_3349.png" alt="Copy"></button>
         </div>
 
         <div id="popup" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 10px; border-radius: 5px;">
