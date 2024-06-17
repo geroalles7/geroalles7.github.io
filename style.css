@@ -15,14 +15,16 @@
     height: auto;
     }
     .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+      margin: 10px auto; /* Asegúrate de tener dos valores para los márgenes: vertical y horizontal */
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid; /* Especifica un color para el borde si es necesario */
+      width: auto; /* Esto permitirá que el div se ajuste al contenido */
+  }
+  
 
     .form-group {
         display: flex;
@@ -127,7 +129,10 @@
             opacity: 1;
         }
     }
-    
+    .footer {
+      color: white; /* Esto cambiará el color del texto a blanco */
+  }
+  
     .content {
         position: relative;
         z-index: 1;
@@ -236,13 +241,16 @@
   }
 }
 
+footer {
+  color: white; /* Esto cambiará el color del texto a blanco */
+}
 
 
 /*hover de las imagenes*/
 .item:hover {
   transform: translate(0, -10px); 
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
-  transform: translateY(-5px); 
+  transform: translateY(-20px); 
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -294,6 +302,7 @@
 
   .containerProyectos {
       padding: 10px; /* Ajuste del padding para móviles */
+      align-items: center;
   }
 
   .card {
@@ -305,8 +314,9 @@
   }
 
   .form-group {
-      flex-direction: column; /* Alinear form-group en columna en móviles */
+      flex-direction:row; /* Alinear form-group en columna en móviles */
       align-items: center;
+      margin: 10px;
   }
 
   .buttons {
@@ -323,7 +333,114 @@
 }
 
 
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
 
+.button-container-1 {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
+  overflow: hidden;
+  
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.button-container-1 button {
+  width: 101%;
+  height: 100%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 1px;
+  background:#000;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+ 
+  
+}
+.button-container-1 button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+.mas {
+  position: absolute;
+  color: #000;
+  text-align: center;
+  width: 101%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: 20px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+.botonesPrincipales {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: center; /* Centra los botones verticalmente */
+  
+}
+
+.button-container-1 {
+  margin: 0 10px; /* Añade un poco de espacio entre los botones */
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+a {
+  color: #00ff95;
+}
 
 
 

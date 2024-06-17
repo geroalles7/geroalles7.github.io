@@ -13,9 +13,11 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mi Portfolio</a>
+            <a class="navbar-brand" href="#" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 25px;">Mi Portfolio</a>
             <div class="ms-auto">
                 <button id="changeLanguageBtn" class="btn btn-light">Inglés</button>
+                
+                <button onclick="location.href='#mail'" class="btn btn-light">Email</button>
             </div>
         </div>
     </nav>
@@ -48,7 +50,7 @@
                 'projects': 'Mis Proyectos',
                 'projectDescription': 'Descripción del proyecto',
                 'mail': 'Mail',
-                'footer': 'Este sitio está desarrollado con HTML, CSS y Bootstrap.'
+                'footer': 'Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.'
             },
             'en': {
                 'buttonText': 'Español',
@@ -103,13 +105,16 @@
             <br>
             <br>
             <div class="botonesPrincipales">
-                <a href="documents/Geronimo Alles CV.pdf" target="_blank" class="btn btn-primary" style="font-size: 30px;" id="openCV">
-                    Ver CV <img src="images/curriculum_profile_biodata_resume_portofolio_cv_vitae_icon_232635.png">
-                </a>
-                
-                <a href="https://wa.me/+5493434055602" target="_blank" class="btn btn-primary ms-2" style="font-size: 30px;" id="contactMe">
-                    Contáctame <img src="images/whatsapp-logo_icon-icons.com_57054.png">
-                </a>
+             
+                <div class="button-container-1" style="width: 200px;">
+                    <span class="mas"><img src="images/curriculum_profile_biodata_resume_portofolio_cv_vitae_icon_232635.png"></span>
+                    <button id="openCV" id='work' type="button" name="Hover" onclick="window.open('documents/Geronimo Alles CV.pdf', '_blank');">Ver CV</button>
+                </div>
+                <div class="button-container-1" style="width: 200px;">
+                    <span class="mas"><img src="images/whatsapp-logo_icon-icons.com_57054.png"></span>
+                    <button id="contactMe" id='work' type="button" name="Hover" onclick="window.open('https://wa.me/+5493434055602', '_blank');" id="contactMe" >Contáctame</button>
+                </div> 
+
             </div>
         </div>
         <br>
@@ -163,43 +168,45 @@
             <img class="item" src="images/js.png">
         
     </div>
-</section>
-<section id="sect2" class="sect">
+
+
     <br>
 <br>
 <br>
 <br>
 <br>
-<div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+<div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
     <div id="projects" style="text-align: center; font-size: 30px; width: 100%;">Mis Proyectos</div>
     
+    <div class="card" style="align-items: center;">
+        <img src="images/images.png" class="card-img-top" alt="Proyecto 1">
+        <div class="card-body" >
+            <h5 class="card-title">TP Final Lab IV</h5>
+            <p class="card-text projectDescription">Este desarrollo es un CRUD, hecho con VITE, utilizando React y Python.</p>
+            
+            <a href="https://github.com/geroalles7/TP-LAB-IV-" class="btn btn-primary stretched-link">GitHub</a>
+           
+            
+            
+        </div>
+    </div>
+
     <div class="card">
-        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 1">
+        <img src="images/laboratorios_lafedar_logo.jpeg" class="card-img-top" alt="Proyecto 2">
         <div class="card-body">
-            <h5 class="card-title">Proyecto 1</h5>
-            <p class="card-text projectDescription">Descripción del proyecto</p>
-            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+            <h5 class="card-title">Pasantia en Laboratorios Lafedar</h5>
+            <p class="card-text projectDescription">Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el codigo ya que es propiedad de la empresa.</p>
+            
         </div>
     </div>
 
     <div class="card">
         <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
         <div class="card-body">
-            <h5 class="card-title">Proyecto 2</h5>
+            <h5 class="card-title">CRUD</h5>
             <p class="card-text projectDescription">Descripción del proyecto</p>
             <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-            <a href="#" class="btn btn-primary stretched-link">Otro</a>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
-        <div class="card-body">
-            <h5 class="card-title">Proyecto 3</h5>
-            <p class="card-text projectDescription">Descripción del proyecto</p>
-            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+            
         </div>
     </div>
 </div>
@@ -213,9 +220,9 @@
 <div class="container" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
     <div id="mail" style="font-size: 30px;">Mail</div>
     <div class="form-group">
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly >
-            <label for="floatingInput">geroalles7@gmail.com</label>
+        <div >
+            <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly style="border: 2px solid ;" >
+            
         </div>
         <div class="buttons">
             <a href="mailto:geroalles7@gmail.com">
@@ -250,9 +257,9 @@
     });
 </script>
 
-</section>
 
-<footer id="footer" style="text-align: center; margin-top: 20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+
+<footer id="footer" style="text-align: center; margin-top: 10px; background-color: #333; font-size: 12px; ">
     Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.
 </footer>
 </body>
