@@ -311,6 +311,7 @@
 
   .buttons {
       flex-direction: column; /* Alinear botones en columna en móviles */
+      
   }
 }
 
@@ -320,6 +321,7 @@
       font-size: 100px; /* Tamaño de fuente grande para pantallas de escritorio */
   }
 }
+
 
 
 
