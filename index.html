@@ -6,6 +6,7 @@
     <title>Mi Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mi Portfolio</a>
             <div class="ms-auto">
-                <button id="changeLanguageBtn" class="btn btn-light">Ingles</button>
+                <button id="changeLanguageBtn" class="btn btn-light">Inglés</button>
             </div>
         </div>
     </nav>
@@ -34,7 +35,7 @@
         // Textos en español e inglés
         const texts = {
             'es': {
-                'buttonText': 'Ingles',
+                'buttonText': 'Inglés',
                 'intro': 'Hola 👋, soy',
                 'role': 'Desarrollador Full Stack Junior.',
                 'openCV': 'Ver CV',
@@ -47,7 +48,6 @@
                 'footer': 'Este sitio está desarrollado con HTML, CSS y Bootstrap.'
             },
             'en': {
-
                 'buttonText': 'Español',
                 'intro': 'Hello 👋, I am',
                 'role': 'Junior Full Stack Developer.',
@@ -61,74 +61,61 @@
                 'footer': 'This site is developed with HTML, CSS, Bootstrap and Javascript.'
             }
         };
-
-        const images = {
-        'es': {
-            'openCV': 'images/downloadupdates_theapplication_thearrow_descarg_2915.png',
-            'contactMe': 'images/whatsapp-logo_icon-icons.com_57054.png'
-        },
-        'en': {
-            'openCV': 'images/downloadupdates_theapplication_thearrow_descarg_2915.png',
-            'contactMe': 'images/whatsapp-logo_icon-icons.com_57054.png'
-        }
-    };
+    
         // Variable para mantener el idioma actual
         let currentLanguage = 'es';
-
+    
         // Función para cambiar el idioma
         function changeLanguage() {
             const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
-
+    
             // Actualizar el contenido de los elementos HTML
             document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
             document.getElementById('intro').innerText = texts[newLanguage]['intro'];
             document.getElementById('role').innerText = texts[newLanguage]['role'];
-            document.getElementById('openCV').innerText = texts[newLanguage]['openCV'];
-            document.getElementById('contactMe').innerText = texts[newLanguage]['contactMe'];
+            document.getElementById('openCV').childNodes[0].textContent = texts[newLanguage]['openCV'] + ' ';
+            document.getElementById('contactMe').childNodes[0].textContent = texts[newLanguage]['contactMe'] + ' ';
             document.getElementById('skills').innerText = texts[newLanguage]['skills'];
             document.getElementById('learning').innerText = texts[newLanguage]['learning'];
             document.getElementById('projects').innerText = texts[newLanguage]['projects'];
             document.querySelectorAll('.projectDescription').forEach(el => el.innerText = texts[newLanguage]['projectDescription']);
             document.getElementById('mail').innerText = texts[newLanguage]['mail'];
             document.getElementById('footer').innerText = texts[newLanguage]['footer'];
-
-            
+    
             // Actualizar el idioma actual
             currentLanguage = newLanguage;
         }
-
+    
         // Event listener para el botón
         document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
-        
     </script>
-
-
-<section id="sect1" class="sect">
-    <div style="text-align: center; font-size: 30px; margin-top: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-        <span id="intro">Hola 👋, soy</span> 
-        <div style="font-size: 100px;">
-            Gerónimo Alles. <br>
+    
+    <section id="sect1" class="sect">
+        <div style="text-align: center; font-size: 30px; margin-top: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            <span id="intro">Hola 👋, soy</span> 
+            <div style="font-size: 100px;" class="gradient-text">
+                Gerónimo Alles. <br>
+            </div>
+            <span id="role">Desarrollador Full Stack Junior.</span>
+            <br>
+            <br>
+            <div class="botonesPrincipales">
+                <a href="documents/Geronimo Alles CV.pdf" target="_blank" class="btn btn-primary" style="font-size: 30px;" id="openCV">
+                    Ver CV <img src="images/curriculum_profile_biodata_resume_portofolio_cv_vitae_icon_232635.png">
+                </a>
+                
+                <a href="https://wa.me/+5493434055602" target="_blank" class="btn btn-primary ms-2" style="font-size: 30px;" id="contactMe">
+                    Contáctame <img src="images/whatsapp-logo_icon-icons.com_57054.png">
+                </a>
+            </div>
         </div>
-        <span id="role">Desarrollador Full Stack Junior.</span>
         <br>
         <br>
-        <div class="botonesPrincipales">
-            <a href="documents/Geronimo Alles CV.pdf" target="_blank" class="btn btn-primary" style="font-size: 30px;" id="openCV">
-                Ver CV 
-            </a>
-            
-            <a href="https://wa.me/+5493434055602" target="_blank" class="btn btn-primary ms-2" style="font-size: 30px;" ID="contactMe">
-                Contáctame 
-            </a>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     
     
     <div class="contenedor" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
@@ -248,7 +235,7 @@
         navigator.clipboard.writeText(email).then(() => {
             // Mostrar popup
             const popup = document.getElementById('popup');
-            popup.style.display = 'block';
+            popup.style.display = 'block'; 
             
             // Ocultar popup después de 2 segundos
             setTimeout(() => {

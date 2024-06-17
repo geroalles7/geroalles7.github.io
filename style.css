@@ -1,6 +1,5 @@
-
     .contenedor {
-        white-space: nowrap; /* Evita que los divs se envuelvan a la siguiente línea */
+        white-space: nowrap; 
     }
     .contenedor2 {
         white-space: nowrap;
@@ -14,7 +13,7 @@
     .item img {
     max-width: 100%;
     height: auto;
-}
+    }
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -35,7 +34,7 @@
     }
 
     .form-control {
-        width: auto; /* Ajusta según necesites */
+        width: auto; 
     }
 
     .buttons {
@@ -49,21 +48,16 @@
 
     .containerProyectos {
         display: flex;
-        justify-content: center; /* Centra las tarjetas horizontalmente */
-        flex-wrap: wrap; /* Permite que las tarjetas se ajusten al ancho del contenedor */
-        gap: 20px; /* Espacio entre las tarjetas */
+        justify-content: center; 
+        flex-wrap: wrap;
+        gap: 20px; 
         padding: 20px;
     }
     .card {
         width: 18rem;
     }
 
-    body {
-        margin: 0;
-        padding: 0;
-        
-        background-color: #000;
-    }
+  
     
     .stars {
         position: fixed;
@@ -76,9 +70,9 @@
     
     .star {
         position: absolute;
-        background-color: #fff;
-        width: 2px;
-        height: 2px;
+        background-color: black;
+        width: 4px;
+        height: 4px;
         border-radius: 50%;
         animation: animateStar 5s linear infinite, twinkle 1.5s linear infinite;
     }
@@ -143,75 +137,128 @@
         padding: 50px;
     }
     @import url(https://fonts.googleapis.com/css?family=Exo:100);
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-/* Animations */
-@-webkit-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-moz-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-o-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-webkit-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@-moz-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@-o-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-/* Main styles */
-body {
-  margin-top: 13.5rem;
-  color: #999;
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  text-align: center;
-  /* img size is 50x50 */
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse .92s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse .92s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse .92s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse .92s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-body::before {
-  
-  font-size: 8rem;
-  font-weight: 100;
-  font-style: normal;
-}
 
-
+  @-webkit-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @-moz-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @-o-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @-webkit-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  @-moz-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  @-o-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  @keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  /* Main styles */
+  body {
+    margin-top: 13.5rem;
+    color: #999;
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    text-align: center;
+    /* img size is 50x50 */
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse .92s infinite;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse .92s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse .92s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse .92s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
     
+   
+  }
+  body::before {
+    
+    font-size: 8rem;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  /*texto del nombre*/
+  .gradient-text {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #86A8E7, #91EAE4);
+    background-size: 200% auto; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  
+    animation: gradient-animation 10s linear infinite; 
+  }
+
+  @keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 200% 50%; 
+  }
+}
+
+
+
+/*hover de las imagenes*/
+.item:hover {
+  transform: translate(0, -10px); 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+  transform: translateY(-5px); 
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+  max-width: 100px; 
+}
+.item b {
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
