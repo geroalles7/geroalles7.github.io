@@ -253,7 +253,66 @@
   font-size: 20px;
 }
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+      padding-top: 4rem; /* Ajuste del padding para dispositivos móviles */
+      overflow-x: hidden; /* Ocultar desplazamiento horizontal */
+  }
 
+  .stars {
+      display: none; /* Ocultar estrellas en dispositivos móviles */
+  }
+
+  .gradient-text {
+      font-size: 30px; /* Reducir tamaño del texto en móviles */
+      line-height: 1; /* Ajustar altura de línea */
+  }
+
+  .gradient-text div {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+  }
+
+  .contenedor, .contenedor2 {
+      white-space: normal; /* Ajuste de espacio en móviles */
+  }
+
+  .item {
+      display: block; /* Ajuste de items para móviles */
+      text-align: center;
+      margin: 10px auto;
+  }
+
+  .item img {
+      max-width: 80%;
+      height: auto;
+  }
+
+  .containerProyectos {
+      padding: 10px; /* Ajuste del padding para móviles */
+  }
+
+  .card {
+      width: 100%; /* Ancho completo en dispositivos móviles */
+  }
+
+  .content {
+      padding: 20px; /* Ajuste de padding */
+  }
+
+  .form-group {
+      flex-direction: column; /* Alinear form-group en columna en móviles */
+      align-items: center;
+  }
+
+  .buttons {
+      flex-direction: column; /* Alinear botones en columna en móviles */
+  }
+}
 
 
 
