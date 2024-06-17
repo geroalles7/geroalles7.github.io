@@ -265,7 +265,7 @@
   }
 
   .gradient-text {
-      font-size: 30px; /* Reducir tamaño del texto en móviles */
+      font-size: calc(12vw + 10px); /* Tamaño de fuente dinámico para móviles */
       line-height: 1; /* Ajustar altura de línea */
   }
 
@@ -314,6 +314,12 @@
   }
 }
 
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+  .gradient-text {
+      font-size: 100px; /* Tamaño de fuente grande para pantallas de escritorio */
+  }
+}
 
 
 
