@@ -33,60 +33,98 @@
     <script>
         // Textos en español e inglés
         const texts = {
-            'es': {
-                'buttonText': 'Inglés',
-                'intro': 'Hola 👋, soy',
-                'role': 'Desarrollador Full Stack Junior.',
-                'openCV': 'Ver CV',
-                'contactMe': 'Contáctame',
-                'skills': 'Mis habilidades',
-                'learning': 'Estoy aprendiendo',
-                'projects': 'Mis Proyectos',
-                'projectDescription': 'Descripción del proyecto',
-                'mail': 'Mail',
-                'footer': 'Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.'
-            },
-            'en': {
-                'buttonText': 'Español',
-                'intro': 'Hello 👋, I am',
-                'role': 'Junior Full Stack Developer.',
-                'openCV': 'See CV',
-                'contactMe': 'Contact me',
-                'skills': 'My skills',
-                'learning': 'I am learning',
-                'projects': 'My Projects',
-                'projectDescription': 'Project description',
-                'mail': 'Email',
-                'footer': 'This site is developed with HTML, CSS, Bootstrap and Javascript.'
-            }
-        };
-    
-        // Variable para mantener el idioma actual
-        let currentLanguage = 'es';
-    
-        // Función para cambiar el idioma
-        function changeLanguage() {
-            const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
-    
-            // Actualizar el contenido de los elementos HTML
-            document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
-            document.getElementById('intro').innerText = texts[newLanguage]['intro'];
-            document.getElementById('role').innerText = texts[newLanguage]['role'];
-            document.getElementById('openCV').childNodes[0].textContent = texts[newLanguage]['openCV'] + ' ';
-            document.getElementById('contactMe').childNodes[0].textContent = texts[newLanguage]['contactMe'] + ' ';
-            document.getElementById('skills').innerText = texts[newLanguage]['skills'];
-            document.getElementById('learning').innerText = texts[newLanguage]['learning'];
-            document.getElementById('projects').innerText = texts[newLanguage]['projects'];
-            document.querySelectorAll('.projectDescription').forEach(el => el.innerText = texts[newLanguage]['projectDescription']);
-            document.getElementById('mail').innerText = texts[newLanguage]['mail'];
-            document.getElementById('footer').innerText = texts[newLanguage]['footer'];
-    
-            // Actualizar el idioma actual
-            currentLanguage = newLanguage;
+    'es': {
+        'buttonText': 'Inglés',
+        'intro': 'Hola 👋, soy',
+        'role': 'Desarrollador Full Stack Junior.',
+        'openCV': 'Ver CV',
+        'contactMe': 'Contáctame',
+        'skills': 'Mis habilidades',
+        'learning': 'Estoy aprendiendo',
+        'projects': 'Mis Proyectos',
+        'projectDescription': 'Descripción del proyecto',
+        'mail': 'Mail',
+        'footer': 'Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.',
+        'projectTitles': [
+            'TP Final Lab IV',
+            'Pasantía en Laboratorios Lafedar',
+            'CRUD'
+        ],
+        'projectDescriptions': [
+            'Este desarrollo es un CRUD, hecho con VITE, utilizando React y Python.',
+            'Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el código ya que es propiedad de la empresa.',
+            'En proceso'
+        ],
+        'githubLinks': [
+            'GitHub',
+            '', // No hay enlace para el segundo proyecto
+            'GitHub'
+        ]
+    },
+    'en': {
+        'buttonText': 'Español',
+        'intro': 'Hello 👋, I am',
+        'role': 'Junior Full Stack Developer.',
+        'openCV': 'See CV',
+        'contactMe': 'Contact me',
+        'skills': 'My skills',
+        'learning': 'I am learning',
+        'projects': 'My Projects',
+        'projectDescription': 'Project description',
+        'mail': 'Email',
+        'footer': 'This site is developed with HTML, CSS, Bootstrap and Javascript.',
+        'projectTitles': [
+            'Final Project Lab IV',
+            'Internship at Lafedar Laboratories',
+            'CRUD'
+        ],
+        'projectDescriptions': [
+            'This development is a CRUD, made with VITE, using React and Python.',
+            'I was making corrections and developments within the company\'s web application, using the Laravel (PHP) framework. I can\'t upload the code as it is company property.',
+            'In progress'
+        ],
+        'githubLinks': [
+            'GitHub',
+            '', // No link for the second project
+            'GitHub'
+        ]
+    }
+};
+
+// Variable para mantener el idioma actual
+let currentLanguage = 'es';
+
+// Función para cambiar el idioma
+function changeLanguage() {
+    const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+
+    // Actualizar el contenido de los elementos HTML
+    document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
+    document.getElementById('intro').innerText = texts[newLanguage]['intro'];
+    document.getElementById('role').innerText = texts[newLanguage]['role'];
+    document.getElementById('openCV').childNodes[0].textContent = texts[newLanguage]['openCV'] + ' ';
+    document.getElementById('contactMe').childNodes[0].textContent = texts[newLanguage]['contactMe'] + ' ';
+    document.getElementById('skills').innerText = texts[newLanguage]['skills'];
+    document.getElementById('learning').innerText = texts[newLanguage]['learning'];
+    document.getElementById('projects').innerText = texts[newLanguage]['projects'];
+    document.querySelectorAll('.projectDescription').forEach((el, index) => el.innerText = texts[newLanguage]['projectDescriptions'][index]);
+    document.querySelectorAll('.card-title').forEach((el, index) => el.innerText = texts[newLanguage]['projectTitles'][index]);
+    document.querySelectorAll('.btn-primary.stretched-link').forEach((el, index) => {
+        if (texts[newLanguage]['githubLinks'][index]) {
+            el.innerText = texts[newLanguage]['githubLinks'][index];
+            el.style.display = 'inline-block';
+        } else {
+            el.style.display = 'none';
         }
+    });
+    document.getElementById('mail').innerText = texts[newLanguage]['mail'];
+    document.getElementById('footer').innerText = texts[newLanguage]['footer'];
+
+    // Actualizar el idioma actual
+    currentLanguage = newLanguage;
     
-        // Event listener para el botón
-        document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
+}
+document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
     </script>
     
     
@@ -174,14 +212,10 @@
     
     <div class="card" style="align-items: center;">
         <img src="images/images.png" class="card-img-top" alt="Proyecto 1">
-        <div class="card-body" >
+        <div class="card-body">
             <h5 class="card-title">TP Final Lab IV</h5>
             <p class="card-text projectDescription">Este desarrollo es un CRUD, hecho con VITE, utilizando React y Python.</p>
-            
             <a href="https://github.com/geroalles7/TP-LAB-IV-" class="btn btn-primary stretched-link">GitHub</a>
-           
-            
-            
         </div>
     </div>
 
@@ -189,21 +223,20 @@
         <img src="images/laboratorios_lafedar_logo.jpeg" class="card-img-top" alt="Proyecto 2">
         <div class="card-body">
             <h5 class="card-title">Pasantia en Laboratorios Lafedar</h5>
-            <p class="card-text projectDescription">Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el codigo ya que es propiedad de la empresa.</p>
-            
+            <p class="card-text projectDescription">Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el código ya que es propiedad de la empresa.</p>
         </div>
     </div>
 
     <div class="card">
-        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
+        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 3">
         <div class="card-body">
             <h5 class="card-title">CRUD</h5>
             <p class="card-text projectDescription">En proceso</p>
             <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-            
         </div>
     </div>
 </div>
+
 <br>
 <br>
 <br>
