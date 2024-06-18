@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    </head>
 
-<body >
+    <body >
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 25px;">Mi Portfolio</a>
-            <div class="ms-auto">
-                <button id="changeLanguageBtn" class="btn btn-light">Inglés</button>
-                
-                <button onclick="location.href='#mail'" class="btn btn-light">Email</button>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 25px;">Mi Portfolio</a>
+                <div class="ms-auto">
+                    <button id="changeLanguageBtn" class="btn btn-light">Inglés</button>
+                    
+                    <button onclick="location.href='#mail'" class="btn btn-light">Email</button>
+                </div>
             </div>
-        </div>
-    </nav>
-    <br>
-    <br>
+        </nav>
+        <br>
+        <br>
    
     
-    <!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
-    <script>
-                // Textos en español e inglés
+        <script>
+                //Textos en español e inglés
                 const texts = {
             'es': {
                 'buttonText': 'Inglés',
@@ -59,7 +59,7 @@
                 ],
                 'githubLinks': [
                     'GitHub',
-                    '', // No hay enlace para el segundo proyecto
+                    '', 
                     'GitHub',
                     ''
                 
@@ -92,21 +92,21 @@
                 ],
                 'githubLinks': [
                     'GitHub',
-                    '', // No link for the second project
+                    '', 
                     'GitHub',
                     '',
                 ]
             }
         };
 
-        // Variable para mantener el idioma actual
+        //Variable para mantener el idioma actual
         let currentLanguage = 'es';
 
-        // Función para cambiar el idioma
+        //Función para cambiar el idioma
         function changeLanguage() {
             const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
 
-            // Actualizar el contenido de los elementos HTML
+            //Actualizar el contenido de los elementos HTML
             document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
             document.getElementById('intro').innerText = texts[newLanguage]['intro'];
             document.getElementById('role').innerText = texts[newLanguage]['role'];
@@ -126,12 +126,12 @@
             document.getElementById('mail').innerText = texts[newLanguage]['mail'];
             document.getElementById('footer').innerText = texts[newLanguage]['footer'];
 
-            // Actualizar el idioma actual
+            //Actualizar el idioma actual
             currentLanguage = newLanguage;
             
         }
         document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
-    </script>
+        </script>
     
     
         <div style="text-align: center; font-size: 30px; margin-top: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" >
@@ -155,6 +155,7 @@
 
             </div>
         </div>
+        
         <br>
         <br>
         <br>
@@ -164,149 +165,143 @@
         <br>
         
     
-    <div class="contenedor" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
-        <div id="skills" style="font-size: 30px;">Mis habilidades</div>
-        <br>
+        <div class="contenedor" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+            <div id="skills" style="font-size: 30px;">Mis habilidades</div>
+            <br>
        
        
-        <div class="item"><b>PHP</b> <br>
-            <img src="images/file.png">
+            <div class="item"><b>PHP</b> <br>
+                <img src="images/file.png">
+            </div>
+            <div class="item"><b>C#</b> <br>
+                <img src="images/csharp_plain_logo_icon_146577.png"> 
+            </div>
+            <div class="item"><b>Java</b> <br>
+                <img src="images/java.png">
+            </div>
+            <div class="item"><b>SQL</b><br>
+                <img src="images/sql logo.jpg">
+            </div>
+            <div class="item"><b>HTML</b><br>
+                <img src="images/html-1.jpg">
+            </div>
+            <div class="item"><b>CSS</b><br>
+                <img src="images/css.png">
+            </div>
+            <div class="item"><b>Git Hub</b><br>
+                <img src="images/git.png">
+            </div>
         </div>
-        <div class="item"><b>C#</b> <br>
-            <img src="images/csharp_plain_logo_icon_146577.png"> 
-        </div>
-        <div class="item"><b>Java</b> <br>
-            <img src="images/java.png">
-        </div>
-        <div class="item"><b>SQL</b><br>
-            <img src="images/sql logo.jpg">
-        </div>
-        <div class="item"><b>HTML</b><br>
-            <img src="images/html-1.jpg">
-        </div>
-        <div class="item"><b>CSS</b><br>
-            <img src="images/css.png">
-        </div>
-        <div class="item"><b>Git Hub</b><br>
-            <img src="images/git.png">
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     
     
-    <div class="contenedor2" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
-        <div id="learning" style="font-size: 30px;">Estoy aprendiendo</div>
-        
-            <div class="item"><img src="images/docker.png"></div>
-            <img class="item"src="images/aws.png">
-            <img class="item" src="images/js.png">
-        
-    </div>
-
-
-    <br>
-<br>
-<br>
-<br>
-<br>
-<div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-    <div id="projects" style="text-align: center; font-size: 30px; width: 100%;">Mis Proyectos</div>
-    
-    <div class="card" style="align-items: center; border: 2px solid;" >
-        <img src="images/images.png" class="card-img-top" alt="Proyecto 1">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 30px;">TP Final Lab IV</h5>
-            <p class="card-text projectDescription">Este desarrollo es un CRUD, hecho con VITE, utilizando React y Python.</p>
-            <a href="https://github.com/geroalles7/TP-LAB-IV-" class="btn btn-primary stretched-link">GitHub</a>
-        </div>
-    </div>
-
-    <div class="card" style="border: 2px solid; ">
-        <img src="images/laboratorios_lafedar_logo.jpeg" class="card-img-top" alt="Proyecto 2">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 30px;">Pasantia en Laboratorios Lafedar</h5>
-            <p class="card-text projectDescription">Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el código ya que es propiedad de la empresa.</p>
-        </div>
-    </div>
-    <div class="card" style="border: 2px solid; ">
-        <img src="images/Captura de pantalla 2024-06-18 114056.png" class="card-img-top" alt="Proyecto 2">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 30px;">Administrador de contraseñas</h5>
-            <p class="card-text projectDescription">Desarrollo hecho con C# y PostgreSql</p>
-            <a href="https://github.com/geroalles7/app_contrasenas" class="btn btn-primary stretched-link">GitHub</a>
-        </div>
-    </div>
-    <div class="card"  style="border: 2px solid;">
-        <img src="images/images.jpeg" class="card-img-top" alt="Proyecto 3">
-        <div class="card-body">
-            <h5 class="card-title" style="font-size: 30px;">CRUD (Proximo desarrollo)</h5>
-            <p class="card-text projectDescription">Desarrollo hecho con Laravel, Docker y PostreSQL</p>
+        <div class="contenedor2" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+            <div id="learning" style="font-size: 30px;">Estoy aprendiendo</div>
+            
+                <div class="item"><img src="images/docker.png"></div>
+                <img class="item"src="images/aws.png">
+                <img class="item" src="images/js.png">
             
         </div>
-    </div>
-</div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-    <div id="mail" style="font-size: 30px;">Mail</div>
-    <div class="form-group">
-        <div >
-            <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly style="border: 2px solid ;" >
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            <div id="projects" style="text-align: center; font-size: 30px; width: 100%;">Mis Proyectos</div>
             
+            <div class="card" style="align-items: center; border: 2px solid;" >
+                <img src="images/images.png" class="card-img-top" alt="Proyecto 1">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 30px;">TP Final Lab IV</h5>
+                    <p class="card-text projectDescription">Este desarrollo es un CRUD, hecho con VITE, utilizando React y Python.</p>
+                    <a href="https://github.com/geroalles7/TP-LAB-IV-" class="btn btn-primary stretched-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="card" style="border: 2px solid; ">
+                <img src="images/laboratorios_lafedar_logo.jpeg" class="card-img-top" alt="Proyecto 2">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 30px;">Pasantia en Laboratorios Lafedar</h5>
+                    <p class="card-text projectDescription">Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el código ya que es propiedad de la empresa.</p>
+                </div>
+            </div>
+            <div class="card" style="border: 2px solid; ">
+                <img src="images/Captura de pantalla 2024-06-18 114056.png" class="card-img-top" alt="Proyecto 2">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 30px;">Administrador de contraseñas</h5>
+                    <p class="card-text projectDescription">Desarrollo hecho con C# y PostgreSql</p>
+                    <a href="https://github.com/geroalles7/app_contrasenas" class="btn btn-primary stretched-link">GitHub</a>
+                </div>
+            </div>
+            <div class="card"  style="border: 2px solid;">
+                <img src="images/images.jpeg" class="card-img-top" alt="Proyecto 3">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 30px;">CRUD (Proximo desarrollo)</h5>
+                    <p class="card-text projectDescription">Desarrollo hecho con Laravel, Docker y PostreSQL</p>
+                    
+                </div>
+            </div>
         </div>
-        <div class="buttons">
-            <a href="mailto:geroalles7@gmail.com">
-                <button type="button" class="btn btn-info"><img src="images/send_120237.png" alt="Send"></button>
-            </a>
-            <button id="copyEmailBtn" type="button" class="btn btn-info"><img src="images/copythislink_3349.png" alt="Copy"></button>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            <div id="mail" style="font-size: 30px;">Mail</div>
+            <div class="form-group">
+                <div >
+                    <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly style="border: 2px solid ;" >
+                    
+                </div>
+                <div class="buttons">
+                    <a href="mailto:geroalles7@gmail.com">
+                        <button type="button" class="btn btn-info"><img src="images/send_120237.png" alt="Send"></button>
+                    </a>
+                    <button id="copyEmailBtn" type="button" class="btn btn-info"><img src="images/copythislink_3349.png" alt="Copy"></button>
+                </div>
+
+                <div id="popup" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 10px; border-radius: 5px;">
+                    Contenido copiado
+                </div>
+            </div>
         </div>
-
-        <div id="popup" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 10px; border-radius: 5px;">
-            Contenido copiado
-        </div>
-    </div>
-</div>
-<script>
-    //Copiar contenido del label
-    document.getElementById('copyEmailBtn').addEventListener('click', function() {
-        const email = document.getElementById('floatingInput').placeholder;
-        
-        // Copiar al portapapeles
-        navigator.clipboard.writeText(email).then(() => {
-            // Mostrar popup
-            const popup = document.getElementById('popup');
-            popup.style.display = 'block'; 
-            
-            // Ocultar popup después de 2 segundos
-            setTimeout(() => {
-                popup.style.display = 'none';
-            }, 2000);
-        }).catch(err => {
-            console.log('Something went wrong', err);
-        });
-    });
-</script>
-
-
-
-<footer id="footer" style="text-align: center; margin-top: 10px; background-color: #333; font-size: 12px; ">
-    Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.
-</footer>
-   
-   
-        
-</body>
+        <script>
+            //Copiar contenido del label
+            document.getElementById('copyEmailBtn').addEventListener('click', function() {
+                const email = document.getElementById('floatingInput').placeholder;
+                
+                // Copiar al portapapeles
+                navigator.clipboard.writeText(email).then(() => {
+                    // Mostrar popup
+                    const popup = document.getElementById('popup');
+                    popup.style.display = 'block'; 
+                    
+                    // Ocultar popup después de 2 segundos
+                    setTimeout(() => {
+                        popup.style.display = 'none';
+                    }, 2000);
+                }).catch(err => {
+                    console.log('Something went wrong', err);
+                });
+            });
+        </script>
+        <footer id="footer" style="text-align: center; margin-top: 10px; background-color: #333; font-size: 12px; ">
+            Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.
+        </footer>
+    </body>
 </html>
-</div>
+
     
 
