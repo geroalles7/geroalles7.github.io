@@ -291,7 +291,7 @@ footer {
   flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 /* Media query para pantallas pequeñas */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .botonesPrincipales {
       flex-direction: column; /* Apilar los botones verticalmente */
   }
