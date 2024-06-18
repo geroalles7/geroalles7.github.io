@@ -9,31 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body >
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mi Portfolio</a>
+            <a class="navbar-brand" href="#" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 25px;">Mi Portfolio</a>
             <div class="ms-auto">
                 <button id="changeLanguageBtn" class="btn btn-light">Inglés</button>
+                
+                <button onclick="location.href='#mail'" class="btn btn-light">Email</button>
             </div>
         </div>
     </nav>
-    <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-    </div>
+    <br>
+    <br>
+   
+    
     <!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     <script>
-        // Textos en español e inglés
-        const texts = {
+                // Textos en español e inglés
+                const texts = {
             'es': {
                 'buttonText': 'Inglés',
                 'intro': 'Hola 👋, soy',
@@ -45,7 +44,27 @@
                 'projects': 'Mis Proyectos',
                 'projectDescription': 'Descripción del proyecto',
                 'mail': 'Mail',
-                'footer': 'Este sitio está desarrollado con HTML, CSS y Bootstrap.'
+                'footer': 'Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.',
+                'projectTitles': [
+                    'TP Final Lab IV',
+                    'Pasantía en Laboratorios Lafedar',
+                    'Administrador de contraseñas',
+                    'CRUD (Proximo desarrollo)'
+                ],
+                'projectDescriptions': [
+                    'Este desarrollo es un CRUD, hecho con VITE, utilizando React y Python.',
+                    'Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el código ya que es propiedad de la empresa.',
+                    'Desarrollo hecho con C# y PostgreSql',
+                    'Desarrollo hecho con Laravel, Docker y PostreSQL'
+                ],
+                'githubLinks': [
+                    'GitHub',
+                    '', // No hay enlace para el segundo proyecto
+                    'GitHub',
+                    ''
+                
+                    
+                ]
             },
             'en': {
                 'buttonText': 'Español',
@@ -58,17 +77,35 @@
                 'projects': 'My Projects',
                 'projectDescription': 'Project description',
                 'mail': 'Email',
-                'footer': 'This site is developed with HTML, CSS, Bootstrap and Javascript.'
+                'footer': 'This site is developed with HTML, CSS, Bootstrap and Javascript.',
+                'projectTitles': [
+                    'Final Project Lab IV',
+                    'Internship at Lafedar Laboratories',
+                    'Password manager',
+                    'CRUD (Next development)'
+                ],
+                'projectDescriptions': [
+                    'This development is a CRUD, made with VITE, using React and Python.',
+                    'I was making corrections and developments within the company\'s web application, using the Laravel (PHP) framework. I can\'t upload the code as it is company property.',
+                    'Development done with C# and PostgreSql',
+                    'Development done with Laravel, Docker and PostreSQL'
+                ],
+                'githubLinks': [
+                    'GitHub',
+                    '', // No link for the second project
+                    'GitHub',
+                    '',
+                ]
             }
         };
-    
+
         // Variable para mantener el idioma actual
         let currentLanguage = 'es';
-    
+
         // Función para cambiar el idioma
         function changeLanguage() {
             const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
-    
+
             // Actualizar el contenido de los elementos HTML
             document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
             document.getElementById('intro').innerText = texts[newLanguage]['intro'];
@@ -78,35 +115,44 @@
             document.getElementById('skills').innerText = texts[newLanguage]['skills'];
             document.getElementById('learning').innerText = texts[newLanguage]['learning'];
             document.getElementById('projects').innerText = texts[newLanguage]['projects'];
-            document.querySelectorAll('.projectDescription').forEach(el => el.innerText = texts[newLanguage]['projectDescription']);
+            document.querySelectorAll('.projectDescription').forEach((el, index) => el.innerText = texts[newLanguage]['projectDescriptions'][index]);
+            document.querySelectorAll('.card-title').forEach((el, index) => el.innerText = texts[newLanguage]['projectTitles'][index]);
+            document.querySelectorAll('.btn-primary.stretched-link').forEach((el, index) => {
+                if (texts[newLanguage]['githubLinks'][index]) {
+                    el.innerText = texts[newLanguage]['githubLinks'][index];
+                    el.style.display = 'inline-block';
+                }
+            });
             document.getElementById('mail').innerText = texts[newLanguage]['mail'];
             document.getElementById('footer').innerText = texts[newLanguage]['footer'];
-    
+
             // Actualizar el idioma actual
             currentLanguage = newLanguage;
+            
         }
-    
-        // Event listener para el botón
         document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
     </script>
     
-    <section id="sect1" class="sect">
-        <div style="text-align: center; font-size: 30px; margin-top: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+    
+        <div style="text-align: center; font-size: 30px; margin-top: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" >
             <span id="intro">Hola 👋, soy</span> 
-            <div style="font-size: 100px;" class="gradient-text">
-                Gerónimo Alles. <br>
+            <div class="gradient-text">
+                Gerónimo Alles. 
             </div>
             <span id="role">Desarrollador Full Stack Junior.</span>
             <br>
             <br>
             <div class="botonesPrincipales">
-                <a href="documents/Geronimo Alles CV.pdf" target="_blank" class="btn btn-primary" style="font-size: 30px;" id="openCV">
-                    Ver CV <img src="images/curriculum_profile_biodata_resume_portofolio_cv_vitae_icon_232635.png">
-                </a>
-                
-                <a href="https://wa.me/+5493434055602" target="_blank" class="btn btn-primary ms-2" style="font-size: 30px;" id="contactMe">
-                    Contáctame <img src="images/whatsapp-logo_icon-icons.com_57054.png">
-                </a>
+             
+                <div class="button-container-1" style="width: 200px;">
+                    <span class="mas"><img src="images/curriculum_profile_biodata_resume_portofolio_cv_vitae_icon_232635.png"></span>
+                    <button id="openCV" id='work' type="button" name="Hover" onclick="window.open('documents/Geronimo Alles CV.pdf', '_blank');">Ver CV</button>
+                </div>
+                <div class="button-container-1" style="width: 200px;">
+                    <span class="mas"><img src="images/whatsapp-logo_icon-icons.com_57054.png"></span>
+                    <button id="contactMe" id='work' type="button" name="Hover" onclick="window.open('https://wa.me/+5493434055602', '_blank');" id="contactMe" >Contáctame</button>
+                </div> 
+
             </div>
         </div>
         <br>
@@ -116,7 +162,7 @@
         <br>
         <br>
         <br>
-    
+        
     
     <div class="contenedor" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
         <div id="skills" style="font-size: 30px;">Mis habilidades</div>
@@ -127,16 +173,16 @@
             <img src="images/file.png">
         </div>
         <div class="item"><b>C#</b> <br>
-            <img src="images/c.png">
+            <img src="images/csharp_plain_logo_icon_146577.png"> 
         </div>
         <div class="item"><b>Java</b> <br>
             <img src="images/java.png">
         </div>
         <div class="item"><b>SQL</b><br>
-            <img src="images/sql.png">
+            <img src="images/sql logo.jpg">
         </div>
         <div class="item"><b>HTML</b><br>
-            <img src="images/html.png">
+            <img src="images/html-1.jpg">
         </div>
         <div class="item"><b>CSS</b><br>
             <img src="images/css.png">
@@ -160,46 +206,50 @@
             <img class="item" src="images/js.png">
         
     </div>
-</section>
-<section id="sect2" class="sect">
+
+
     <br>
 <br>
 <br>
 <br>
 <br>
-<div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+<div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
     <div id="projects" style="text-align: center; font-size: 30px; width: 100%;">Mis Proyectos</div>
     
-    <div class="card">
-        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 1">
+    <div class="card" style="align-items: center; border: 2px solid;" >
+        <img src="images/images.png" class="card-img-top" alt="Proyecto 1">
         <div class="card-body">
-            <h5 class="card-title">Proyecto 1</h5>
-            <p class="card-text projectDescription">Descripción del proyecto</p>
-            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+            <h5 class="card-title" style="font-size: 30px;">TP Final Lab IV</h5>
+            <p class="card-text projectDescription">Este desarrollo es un CRUD, hecho con VITE, utilizando React y Python.</p>
+            <a href="https://github.com/geroalles7/TP-LAB-IV-" class="btn btn-primary stretched-link">GitHub</a>
         </div>
     </div>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
+    <div class="card" style="border: 2px solid; ">
+        <img src="images/laboratorios_lafedar_logo.jpeg" class="card-img-top" alt="Proyecto 2">
         <div class="card-body">
-            <h5 class="card-title">Proyecto 2</h5>
-            <p class="card-text projectDescription">Descripción del proyecto</p>
-            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+            <h5 class="card-title" style="font-size: 30px;">Pasantia en Laboratorios Lafedar</h5>
+            <p class="card-text projectDescription">Estuve haciendo correcciones y desarrollos dentro del aplicativo web de la empresa, utilizando el framework Laravel (PHP). No puedo subir el código ya que es propiedad de la empresa.</p>
         </div>
     </div>
-
-    <div class="card">
-        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
+    <div class="card" style="border: 2px solid; ">
+        <img src="images/Captura de pantalla 2024-06-18 114056.png" class="card-img-top" alt="Proyecto 2">
         <div class="card-body">
-            <h5 class="card-title">Proyecto 3</h5>
-            <p class="card-text projectDescription">Descripción del proyecto</p>
-            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+            <h5 class="card-title" style="font-size: 30px;">Administrador de contraseñas</h5>
+            <p class="card-text projectDescription">Desarrollo hecho con C# y PostgreSql</p>
+            <a href="https://github.com/geroalles7/app_contrasenas" class="btn btn-primary stretched-link">GitHub</a>
+        </div>
+    </div>
+    <div class="card"  style="border: 2px solid;">
+        <img src="images/images.jpeg" class="card-img-top" alt="Proyecto 3">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 30px;">CRUD (Proximo desarrollo)</h5>
+            <p class="card-text projectDescription">Desarrollo hecho con Laravel, Docker y PostreSQL</p>
+            
         </div>
     </div>
 </div>
+
 <br>
 <br>
 <br>
@@ -210,9 +260,9 @@
 <div class="container" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
     <div id="mail" style="font-size: 30px;">Mail</div>
     <div class="form-group">
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly >
-            <label for="floatingInput">geroalles7@gmail.com</label>
+        <div >
+            <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly style="border: 2px solid ;" >
+            
         </div>
         <div class="buttons">
             <a href="mailto:geroalles7@gmail.com">
@@ -247,11 +297,14 @@
     });
 </script>
 
-</section>
 
-<footer id="footer" style="text-align: center; margin-top: 20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+
+<footer id="footer" style="text-align: center; margin-top: 10px; background-color: #333; font-size: 12px; ">
     Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.
 </footer>
+   
+   
+        
 </body>
 </html>
 </div>
