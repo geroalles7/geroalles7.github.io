@@ -6,186 +6,253 @@
     <title>Mi Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
-
-    
-
-
-<!-- Bootstrap JS y dependencias (requerido para el navbar responsive) -->
-
-
 
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">Mi Portfolio</a>
-            <button id="changeLanguageBtn" class="btn btn-light ml-auto">Cambiar idioma</button>
+            <div class="ms-auto">
+                <button id="changeLanguageBtn" class="btn btn-light">Inglés</button>
+            </div>
         </div>
     </nav>
-    <!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    // Textos en español e inglés
-    const texts = {
-        'es': {
-            'title': 'Bienvenido',
-            'content': 'Este es un ejemplo de cambio de idioma.',
-            'buttonText': 'Cambiar idioma'
-        },
-        'en': {
-            'title': 'Welcome',
-            'content': 'This is an example of language change.',
-            'buttonText': 'Change language'
-        }
-    };
-
-    // Variable para mantener el idioma actual
-    let currentLanguage = 'es';
-
-    // Función para cambiar el idioma
-    function changeLanguage() {
-        const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
-
-        // Actualizar el contenido de los elementos HTML
-        document.getElementById('title').innerText = texts[newLanguage]['title'];
-        document.getElementById('content').innerText = texts[newLanguage]['content'];
-        document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
-
-        // Actualizar el idioma actual
-        currentLanguage = newLanguage;
-    }
-
-    // Event listener para el botón
-    document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
-</script>
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6 mx-auto text-center">
-                <h1 id="title">Bienvenido</h1>
-                <p id="content">Este es un ejemplo de cambio de idioma.</p>
-            </div>
-        </div>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
     </div>
-
-
-        
-        <div style="text-align: center; font-size: 30px;">
-            Hola 👋, soy <br>
-            <div style="font-size: 100px;">
+    <!-- Bootstrap JS y dependencias (jQuery y Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Textos en español e inglés
+        const texts = {
+            'es': {
+                'buttonText': 'Inglés',
+                'intro': 'Hola 👋, soy',
+                'role': 'Desarrollador Full Stack Junior.',
+                'openCV': 'Ver CV',
+                'contactMe': 'Contáctame',
+                'skills': 'Mis habilidades',
+                'learning': 'Estoy aprendiendo',
+                'projects': 'Mis Proyectos',
+                'projectDescription': 'Descripción del proyecto',
+                'mail': 'Mail',
+                'footer': 'Este sitio está desarrollado con HTML, CSS y Bootstrap.'
+            },
+            'en': {
+                'buttonText': 'Español',
+                'intro': 'Hello 👋, I am',
+                'role': 'Junior Full Stack Developer.',
+                'openCV': 'See CV',
+                'contactMe': 'Contact me',
+                'skills': 'My skills',
+                'learning': 'I am learning',
+                'projects': 'My Projects',
+                'projectDescription': 'Project description',
+                'mail': 'Email',
+                'footer': 'This site is developed with HTML, CSS, Bootstrap and Javascript.'
+            }
+        };
+    
+        // Variable para mantener el idioma actual
+        let currentLanguage = 'es';
+    
+        // Función para cambiar el idioma
+        function changeLanguage() {
+            const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+    
+            // Actualizar el contenido de los elementos HTML
+            document.getElementById('changeLanguageBtn').innerText = texts[newLanguage]['buttonText'];
+            document.getElementById('intro').innerText = texts[newLanguage]['intro'];
+            document.getElementById('role').innerText = texts[newLanguage]['role'];
+            document.getElementById('openCV').childNodes[0].textContent = texts[newLanguage]['openCV'] + ' ';
+            document.getElementById('contactMe').childNodes[0].textContent = texts[newLanguage]['contactMe'] + ' ';
+            document.getElementById('skills').innerText = texts[newLanguage]['skills'];
+            document.getElementById('learning').innerText = texts[newLanguage]['learning'];
+            document.getElementById('projects').innerText = texts[newLanguage]['projects'];
+            document.querySelectorAll('.projectDescription').forEach(el => el.innerText = texts[newLanguage]['projectDescription']);
+            document.getElementById('mail').innerText = texts[newLanguage]['mail'];
+            document.getElementById('footer').innerText = texts[newLanguage]['footer'];
+    
+            // Actualizar el idioma actual
+            currentLanguage = newLanguage;
+        }
+    
+        // Event listener para el botón
+        document.getElementById('changeLanguageBtn').addEventListener('click', changeLanguage);
+    </script>
+    
+    <section id="sect1" class="sect">
+        <div style="text-align: center; font-size: 30px; margin-top: 50px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+            <span id="intro">Hola 👋, soy</span> 
+            <div style="font-size: 100px;" class="gradient-text">
                 Gerónimo Alles. <br>
             </div>
-           
-            Desarrollador Full Stack Junior.
+            <span id="role">Desarrollador Full Stack Junior.</span>
             <br>
             <br>
             <div class="botonesPrincipales">
-                <a href="documents/Geronimo Alles CV.pdf" download>
-                    <button  style="font-size: 30px;">Descargar CV</button>
-                </a> 
-                <button style="font-size: 30px;">Contáctame</button>
-            </div>
-            
-            
-        </div>
-        <br>
-        <br>
-        <div class="contenedor" style="text-align: center; display:flexbox;">
-            <div style="font-size: 30px;"> Mis habilidades </div>
-           <br>
-           <br>
-           <br>
-            <div class="item"><b>PHP</b> <br>
-                <img src="images/file.png">
-            </div>
-            <div class="item"><b>C#</b> <br>
-                <img src="images/c.png">
-            </div>
-            <div class="item"><b>Java</b> <br>
-                <img src="images/java.png">
-            </div>
-            <div class="item"><b>SQL</b><br>
-                <img src="images/sql.png">
-            </div>
-            <div class="item"><b>HTML</b><br>
-                <img src="images/html.png">
-            </div>
-            <div class="item"><b>CSS</b><br>
-                <img src="images/css.png">
-            </div>
-            <div class="item"><b>Git Hub</b><br>
-                <img src="images/git.png">
+                <a href="documents/Geronimo Alles CV.pdf" target="_blank" class="btn btn-primary" style="font-size: 30px;" id="openCV">
+                    Ver CV <img src="images/curriculum_profile_biodata_resume_portofolio_cv_vitae_icon_232635.png">
+                </a>
+                
+                <a href="https://wa.me/+5493434055602" target="_blank" class="btn btn-primary ms-2" style="font-size: 30px;" id="contactMe">
+                    Contáctame <img src="images/whatsapp-logo_icon-icons.com_57054.png">
+                </a>
             </div>
         </div>
         <br>
         <br>
-        <div class="contenedor2" style="text-align: center; display:flexbox;">
-            <div style="font-size: 30px;"> Estoy aprendiendo </div>
-            
-                <div class="item"><img src="images/docker.png"></div>
-                <img class="item"src="images/aws.png">
-                <img class="item" src="images/js.png">
-            
-        </div>
         <br>
         <br>
-        <div class="containerProyectos">
-            <div style="text-align: center; font-size: 30px; width: 100%;">Mis Proyectos</div>
-            
-            <div class="card">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 1">
-                <div class="card-body">
-                    <h5 class="card-title">Proyecto 1</h5>
-                    <p class="card-text">Descripción del proyecto</p>
-                    <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-                    <a href="#" class="btn btn-primary stretched-link">Otro</a>
-                </div>
-            </div>
+        <br>
+        <br>
+        <br>
     
-            <div class="card">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
-                <div class="card-body">
-                    <h5 class="card-title">Proyecto 2</h5>
-                    <p class="card-text">Descripción del proyecto</p>
-                    <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-                    <a href="#" class="btn btn-primary stretched-link">Otro</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
-                <div class="card-body">
-                    <h5 class="card-title">Proyecto 3</h5>
-                    <p class="card-text">Descripción del proyecto</p>
-                    <a href="#" class="btn btn-primary stretched-link">GitHub</a>
-                    <a href="#" class="btn btn-primary stretched-link">Otro</a>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="container">
-            <div style="font-size: 30px;">Mail</div>
-            <div class="form-group">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly>
-                    <label for="floatingInput">geroalles7@gmail.com</label>
-                </div>
-                <div class="buttons">
-                    <button><img src="images/send_120237.png" alt="Send"></button>
-                    <button><img src="images/copythislink_3349.png" alt="Copy"></button>
-                </div>
-            </div>
-        </div>
     
+    <div class="contenedor" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+        <div id="skills" style="font-size: 30px;">Mis habilidades</div>
+        <br>
+       
+       
+        <div class="item"><b>PHP</b> <br>
+            <img src="images/file.png">
+        </div>
+        <div class="item"><b>C#</b> <br>
+            <img src="images/c.png">
+        </div>
+        <div class="item"><b>Java</b> <br>
+            <img src="images/java.png">
+        </div>
+        <div class="item"><b>SQL</b><br>
+            <img src="images/sql.png">
+        </div>
+        <div class="item"><b>HTML</b><br>
+            <img src="images/html.png">
+        </div>
+        <div class="item"><b>CSS</b><br>
+            <img src="images/css.png">
+        </div>
+        <div class="item"><b>Git Hub</b><br>
+            <img src="images/git.png">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div class="contenedor2" style="text-align: center; display:flexbox; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+        <div id="learning" style="font-size: 30px;">Estoy aprendiendo</div>
         
-    </body>
-    <footer style="text-align: center; margin-top: 20px;">
-        Este sitio está desarrollado con HTML, CSS y Bootstrap.
-    </footer>
+            <div class="item"><img src="images/docker.png"></div>
+            <img class="item"src="images/aws.png">
+            <img class="item" src="images/js.png">
+        
+    </div>
+</section>
+<section id="sect2" class="sect">
+    <br>
+<br>
+<br>
+<br>
+<br>
+<div class="containerProyectos" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+    <div id="projects" style="text-align: center; font-size: 30px; width: 100%;">Mis Proyectos</div>
+    
+    <div class="card">
+        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 1">
+        <div class="card-body">
+            <h5 class="card-title">Proyecto 1</h5>
+            <p class="card-text projectDescription">Descripción del proyecto</p>
+            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
+            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
+        <div class="card-body">
+            <h5 class="card-title">Proyecto 2</h5>
+            <p class="card-text projectDescription">Descripción del proyecto</p>
+            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
+            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/200" class="card-img-top" alt="Proyecto 2">
+        <div class="card-body">
+            <h5 class="card-title">Proyecto 3</h5>
+            <p class="card-text projectDescription">Descripción del proyecto</p>
+            <a href="#" class="btn btn-primary stretched-link">GitHub</a>
+            <a href="#" class="btn btn-primary stretched-link">Otro</a>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+    <div id="mail" style="font-size: 30px;">Mail</div>
+    <div class="form-group">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="geroalles7@gmail.com" readonly >
+            <label for="floatingInput">geroalles7@gmail.com</label>
+        </div>
+        <div class="buttons">
+            <a href="mailto:geroalles7@gmail.com">
+                <button type="button" class="btn btn-info"><img src="images/send_120237.png" alt="Send"></button>
+            </a>
+            <button id="copyEmailBtn" type="button" class="btn btn-info"><img src="images/copythislink_3349.png" alt="Copy"></button>
+        </div>
+
+        <div id="popup" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 10px; border-radius: 5px;">
+            Contenido copiado
+        </div>
+    </div>
+</div>
+<script>
+    //Copiar contenido del label
+    document.getElementById('copyEmailBtn').addEventListener('click', function() {
+        const email = document.getElementById('floatingInput').placeholder;
+        
+        // Copiar al portapapeles
+        navigator.clipboard.writeText(email).then(() => {
+            // Mostrar popup
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block'; 
+            
+            // Ocultar popup después de 2 segundos
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 2000);
+        }).catch(err => {
+            console.log('Something went wrong', err);
+        });
+    });
+</script>
+
+</section>
+
+<footer id="footer" style="text-align: center; margin-top: 20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"">
+    Este sitio está desarrollado con HTML, CSS, Bootstrap y Javascript.
+</footer>
+</body>
 </html>
 </div>
     
