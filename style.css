@@ -289,19 +289,21 @@ footer {
   align-items: center; /* Centra los botones verticalmente */
   gap: 10px; /* Ajusta este valor para cambiar el espacio entre los contenedores */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  flex-direction: row;
 }
 /* Media query para pantallas pequeñas */
-@media (max-width: 800px) {
+@media (max-width: 1080px) {
   .botonesPrincipales {
       flex-direction: column; /* Apilar los botones verticalmente */
   }
 
   .button-container-1 {
-      margin-bottom: 10px; /* Añadir espacio entre los botones apilados */
+    margin-bottom: 10px; /* Añadir espacio entre los botones apilados */
+    width: 100%; /* Añadir espacio entre los botones apilados */
   }
 }
 .button-container-1 {
-  margin: 0 10px; /* Añade un poco de espacio entre los botones */
+  margin: 0 10px;/* Añade un poco de espacio entre los botones */
 }
 
 @-webkit-keyframes ani {
