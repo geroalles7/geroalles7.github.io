@@ -21,7 +21,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 2px solid; /* Especifica un color para el borde si es necesario */
+      border: 2px solid;
       width: auto; /* Esto permitirá que el div se ajuste al contenido */
   }
   
@@ -59,76 +59,6 @@
         width: 18rem;
     }
 
-  
-    
-    .stars {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-    
-    .star {
-        position: absolute;
-        background-color: black;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        animation: animateStar 5s linear infinite, twinkle 1.5s linear infinite;
-    }
-    
-    .star:nth-child(1) {
-        top: 10%;
-        left: 20%;
-        animation-delay: 0s;
-    }
-    
-    .star:nth-child(2) {
-        top: 20%;
-        left: 70%;
-        animation-delay: 1s;
-    }
-    
-    .star:nth-child(3) {
-        top: 30%;
-        left: 40%;
-        animation-delay: 2s;
-    }
-    
-    .star:nth-child(4) {
-        top: 50%;
-        left: 60%;
-        animation-delay: 3s;
-    }
-    
-    .star:nth-child(5) {
-        top: 70%;
-        left: 80%;
-        animation-delay: 4s;
-    }
-    
-    @keyframes animateStar {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(500px);
-        }
-    }
-    
-    @keyframes twinkle {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0.5;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
     .footer {
       color: white; /* Esto cambiará el color del texto a blanco */
   }
@@ -184,39 +114,7 @@
     }
   }
   /* Main styles */
-  body {
-    margin-top: 13.5rem;
-    color: #999;
-    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-    text-align: center;
-    /* img size is 50x50 */
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-    -webkit-animation: bg-scrolling-reverse .92s infinite;
-    /* Safari 4+ */
-    -moz-animation: bg-scrolling-reverse .92s infinite;
-    /* Fx 5+ */
-    -o-animation: bg-scrolling-reverse .92s infinite;
-    /* Opera 12+ */
-    animation: bg-scrolling-reverse .92s infinite;
-    /* IE 10+ */
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin: 0;
-    padding: 0;
-    
-   
-  }
-  body::before {
-    
-    font-size: 8rem;
-    font-weight: 100;
-    font-style: normal;
-  }
+  
 
   /*texto del nombre*/
   .gradient-text {
@@ -275,6 +173,8 @@ footer {
   .gradient-text {
       font-size: calc(12vw + 10px); /* Tamaño de fuente dinámico para móviles */
       line-height: 1; /* Ajustar altura de línea */
+      
+
   }
 
   .gradient-text div {
@@ -283,6 +183,7 @@ footer {
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 100%;
+    
   }
 
   .contenedor, .contenedor2 {
@@ -332,19 +233,16 @@ footer {
   }
 }
 
-
+/*Botones principales*/
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100");
 
 .button-container-1 {
   position: relative;
-  width: 100px;
+  width: 180px;
   height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 6vh;
+  margin: 0; /* Elimina márgenes personalizados */
   overflow: hidden;
-  
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -352,13 +250,13 @@ footer {
   letter-spacing: 1px;
 }
 .button-container-1 button {
-  width: 101%;
+  width: 100%;
   height: 100%;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 300;
   font-size: 30px;
   letter-spacing: 1px;
-  background:#000;
+  background: #000;
   -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
@@ -368,8 +266,6 @@ footer {
   cursor: pointer;
   -webkit-animation: ani2 0.7s steps(22) forwards;
   animation: ani2 0.7s steps(22) forwards;
- 
-  
 }
 .button-container-1 button:hover {
   -webkit-animation: ani 0.7s steps(22) forwards;
@@ -391,9 +287,19 @@ footer {
   display: flex;
   justify-content: center; /* Centra los botones horizontalmente */
   align-items: center; /* Centra los botones verticalmente */
-  
+  gap: 10px; /* Ajusta este valor para cambiar el espacio entre los contenedores */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  .botonesPrincipales {
+      flex-direction: column; /* Apilar los botones verticalmente */
+  }
 
+  .button-container-1 {
+      margin-bottom: 10px; /* Añadir espacio entre los botones apilados */
+  }
+}
 .button-container-1 {
   margin: 0 10px; /* Añade un poco de espacio entre los botones */
 }
@@ -443,6 +349,135 @@ a {
 }
 
 
+
+#intro{
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: 1 ;
+}
+
+#role{
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: 1 ;
+}
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse .92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse .92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse .92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse .92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none; /* Para que las estrellas no interfieran con el contenido */
+}
+
+
+
+@keyframes shoot {
+  0% {
+      opacity: 0;
+      transform: translate(100vw, 0) rotate(45deg);
+  }
+  20% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: translate(-100vw, 100vh) rotate(45deg);
+  }
+}
 
 
 
