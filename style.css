@@ -15,14 +15,14 @@
     height: auto;
     }
     .container {
-      margin: 10px auto; /* Asegúrate de tener dos valores para los márgenes: vertical y horizontal */
+      margin: 10px auto; 
       padding: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       
-      width: auto; /* Esto permitirá que el div se ajuste al contenido */
+      width: auto; 
   }
   
 
@@ -53,15 +53,10 @@
         justify-content: center; 
         flex-wrap: wrap;
         gap: 20px; 
-        padding: 20px;
-        
-        
+        padding: 20px; 
     }
     .card {
-      
         width: 18rem;
-        
-        
     }
     .card:hover {
       transform: translate(0, -10px); 
@@ -72,7 +67,7 @@
 
     .footer {
       color: white; /* Esto cambiará el color del texto a blanco */
-  }
+    }
   
     .content {
         position: relative;
@@ -82,7 +77,9 @@
         font-size: 30px;
         padding: 50px;
     }
-    @import url(https://fonts.googleapis.com/css?family=Exo:100);
+    
+
+  @import url(https://fonts.googleapis.com/css?family=Exo:100);
 
   @-webkit-keyframes bg-scrolling-reverse {
     100% {
@@ -124,7 +121,7 @@
       background-position: 50px 50px;
     }
   }
-  /* Main styles */
+  
   
 
   /*texto del nombre*/
@@ -151,7 +148,7 @@
 }
 
 footer {
-  color: white; /* Esto cambiará el color del texto a blanco */
+  color: white; 
 }
 
 
@@ -173,17 +170,17 @@ footer {
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   body {
-      padding-top: 4rem; /* Ajuste del padding para dispositivos móviles */
-      overflow-x: hidden; /* Ocultar desplazamiento horizontal */
+      padding-top: 4rem; 
+      overflow-x: hidden; 
   }
 
   .stars {
-      display: none; /* Ocultar estrellas en dispositivos móviles */
+      display: none; 
   }
 
   .gradient-text {
-      font-size: calc(12vw + 10px); /* Tamaño de fuente dinámico para móviles */
-      line-height: 1; /* Ajustar altura de línea */
+      font-size: calc(12vw + 10px); 
+      line-height: 1; 
       
 
   }
@@ -198,11 +195,11 @@ footer {
   }
 
   .contenedor, .contenedor2 {
-      white-space: normal; /* Ajuste de espacio en móviles */
+      white-space: normal; 
   }
 
   .item {
-      display: block; /* Ajuste de items para móviles */
+      display: block; 
       text-align: center;
       margin: 10px auto;
   }
@@ -213,26 +210,25 @@ footer {
   }
 
   .containerProyectos {
-      padding: 10px; /* Ajuste del padding para móviles */
-      align-items: center;
+      padding: 10px; 
   }
 
   .card {
-      width: 100%; /* Ancho completo en dispositivos móviles */
+      width: 100%; 
   }
 
   .content {
-      padding: 20px; /* Ajuste de padding */
+      padding: 20px; 
   }
 
   .form-group {
-      flex-direction:row; /* Alinear form-group en columna en móviles */
+      flex-direction:row; 
       align-items: center;
       margin: 10px;
   }
 
   .buttons {
-      flex-direction: column; /* Alinear botones en columna en móviles */
+      flex-direction: column; 
       
   }
 }
@@ -240,7 +236,7 @@ footer {
 /* Estilos para pantallas grandes */
 @media (min-width: 769px) {
   .gradient-text {
-      font-size: 100px; /* Tamaño de fuente grande para pantallas de escritorio */
+      font-size: 100px; 
   }
 }
 
@@ -252,7 +248,7 @@ footer {
   position: relative;
   width: 180px;
   height: 50px;
-  margin: 0; /* Elimina márgenes personalizados */
+  margin: 0; 
   overflow: hidden;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -296,27 +292,29 @@ footer {
 }
 .botonesPrincipales {
   display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
-  align-items: center; /* Centra los botones verticalmente */
-  gap: 10px; /* Ajusta este valor para cambiar el espacio entre los contenedores */
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  flex-wrap: wrap; 
   flex-direction: row;
 }
+
+
 /* Media query para pantallas pequeñas */
 @media (max-width: 1080px) {
   .botonesPrincipales {
-      flex-direction: column; /* Apilar los botones verticalmente */
+      flex-direction: column; 
   }
 
   .button-container-1 {
-    margin-bottom: 10px; /* Añadir espacio entre los botones apilados */
-    width: 100%; /* Añadir espacio entre los botones apilados */
+    margin-bottom: 10px; 
+    width: 100%; 
   }
 }
 .button-container-1 {
-  margin: 0 10px;/* Añade un poco de espacio entre los botones */
+  margin: 0 10px;
 }
-
+/* Animacion botones principales*/
 @-webkit-keyframes ani {
   from {
     -webkit-mask-position: 0 0;
@@ -363,40 +361,8 @@ a {
 
 
 
-#intro{
-  animation-duration: 1s;
-  animation-name: slidein;
-  animation-iteration-count: 1 ;
-}
-
-#role{
-  animation-duration: 1s;
-  animation-name: slidein;
-  animation-iteration-count: 1 ;
-}
-@keyframes slidein {
-  from {
-    margin-left: 0%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-
-
-
-
-/* Cool infinite background scrolling animation.
- * Twitter: @kootoopas
- */
-/* Exo thin font from Google. */
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-/* Animations */
+
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
@@ -437,22 +403,22 @@ a {
     background-position: 50px 50px;
   }
 }
-/* Main styles */
+
 body {
   margin-top: 13.5rem;
   color: #999;
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: center;
-  /* img size is 50x50 */
+ 
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
   -webkit-animation: bg-scrolling-reverse .92s infinite;
-  /* Safari 4+ */
+  
   -moz-animation: bg-scrolling-reverse .92s infinite;
-  /* Fx 5+ */
+  
   -o-animation: bg-scrolling-reverse .92s infinite;
-  /* Opera 12+ */
+  
   animation: bg-scrolling-reverse .92s infinite;
-  /* IE 10+ */
+  
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
@@ -473,10 +439,8 @@ body::before {
   height: 100%;
   z-index: -1;
   overflow: hidden;
-  pointer-events: none; /* Para que las estrellas no interfieran con el contenido */
+  pointer-events: none; 
 }
-
-
 
 @keyframes shoot {
   0% {
